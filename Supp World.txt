@@ -1,9 +1,0 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <title>Supp World!</title>
-    </head>
-    <body>
-        <h1>I am the best in the world</h1>
-    </body>
-</html>
