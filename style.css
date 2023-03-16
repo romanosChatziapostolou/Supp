@@ -1,7 +1,12 @@
+/*primary-text-colour*/
+/*primary-background-colour*/
+/*secondary-background-colour*/
+/*highlight-colour*/
+/*affordance-colour*/
 /* Selector lists */
 body {
   font-family: Futura, Trebuchet MS, Arial, san-serif;
-  color: #202124;
+  color: #02b13c;
 }
 
 h1 {
@@ -10,24 +15,57 @@ h1 {
 }
 
 h3 {
+  text-align: left;
   margin: 30px 0px 10px 47px;
 }
 
-.navbar {
+nav {
   text-align: right;
 }
-.navbar li {
+nav li {
   display: inline-block;
   padding: 10px;
 }
-.navbar a {
-  color: #202124;
+nav a {
+  color: #8cc0f5;
 }
-.navbar a, .navbar a:active, .navbar a:hover, .navbar a:visited {
+nav a, nav a:active, nav a:hover, nav a:visited {
   text-decoration: none;
 }
-.navbar a:active, .navbar a:hover {
+nav a:active, nav a:hover {
   text-decoration: underline;
+}
+
+.Instructions {
+  display: inline-block;
+  position: relative;
+  float: none;
+  text-align: left;
+  left: -39%;
+  width: 32%;
+  min-width: 160px;
+  margin: 10px 0 8px 1%;
+  font-size: 11px;
+  padding-left: 5px;
+}
+
+.Instruction1 {
+  margin-left: -90%;
+  height: 30px;
+  display: inline-flexbox;
+  align-items: left;
+  color: #969ba1;
+  font-family: arial, sans-serif;
+}
+
+.Example {
+  position: relative;
+  text-align: left;
+  left: 0;
+  font-family: monospace;
+  font-size: 11px;
+  white-space: pre;
+  color: #4a576f;
 }
 
 .searchbar {
@@ -45,6 +83,15 @@ h3 {
   .searchbar {
     width: 90%;
   }
+  .Instruction1 {
+    display: none;
+  }
+  .Instructions {
+    display: none;
+  }
+  .Example {
+    display: none;
+  }
 }
 .searchbar-sm {
   border-radius: 5px;
@@ -58,9 +105,18 @@ h3 {
   .searchbar-sm {
     width: 190px;
   }
+  .Instruction1 {
+    display: none;
+  }
+  .Instructions {
+    display: none;
+  }
+  .Example {
+    display: none;
+  }
 }
 .searchbutton {
-  background-color: #F8F9FA;
+  background-color: #8cc0f5;
   border-style: none;
   margin: 11px 4px;
   padding: 8px 16px;
@@ -74,8 +130,8 @@ h3 {
 }
 .text-input-table tr td .searchbutton {
   float: right;
-  background-color: #4D90FE;
-  color: #FFFFFF;
+  background-color: #8ab4f8;
+  color: white;
 }
 
 .vertical-center {
@@ -85,6 +141,15 @@ h3 {
 @media only screen and (max-height: 500px) {
   .vertical-center {
     margin-top: 15px;
+  }
+  .Instruction1 {
+    display: none;
+  }
+  .Instructions {
+    display: none;
+  }
+  .Example {
+    display: none;
   }
 }
 .searchbar:hover, .searchbar:focus, .searchbar-sm:hover, .searchbar-sm:focus, .searchbutton:hover {

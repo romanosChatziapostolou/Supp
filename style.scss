@@ -1,9 +1,9 @@
-$primary-text-colour: #202124;
+/*primary-text-colour*/ $ptc: #202124;
 
-$primary-background-colour: #FFFFFF;
-$secondary-background-colour: #F8F9FA;
-$highlight-colour: #888888;
-$affordance-colour: #4D90FE;
+/*primary-background-colour*/ $pbc: #819e58;
+/*secondary-background-colour*/ $sbc: #8cc0f5;
+/*highlight-colour*/ $hc: #888888;
+/*affordance-colour*/ $ac: #8ab4f8;
 
 /* Selector lists */
 $a-tags: 'a, a:active, a:hover, a:visited';
@@ -14,7 +14,7 @@ $ui-tags-hover: '.searchbar:hover, .searchbar:focus, .searchbar-sm:hover, .searc
 
 body {
 	font-family: Futura, Trebuchet MS, Arial, san-serif;
-	color: $primary-text-colour;
+	color: #02b13c;
 }
 
 h1 {
@@ -23,10 +23,11 @@ h1 {
 }
 
 h3 {
+	text-align: left;
 	margin: 30px 0px 10px 47px;
 }
 
-.navbar {
+nav {
 	text-align: right;
 
 	li {
@@ -35,7 +36,8 @@ h3 {
 	}
 
 	a {
-		color: $primary-text-colour;
+		color: $sbc;
+		;
 	}
 
 
@@ -48,8 +50,40 @@ h3 {
 	}
 }
 
+.Instructions {
+	display: inline-block; 
+	position: relative; 
+	float: none;
+	text-align: left;
+	left: -39%; 
+	width: 32%; 
+	min-width: 160px; 
+	margin: 10px 0 8px 1%; 
+	font-size: 11px; 
+	padding-left: 5px;
+}
+
+.Instruction1 {
+	margin-left: -90%;
+	height: 30px;
+	display: inline-flexbox; 
+	align-items: left; 
+	color: #969ba1; 
+	font-family: arial,sans-serif;
+}
+
+.Example {
+	position:relative; 
+	text-align: left; 
+	left: 0;
+	font-family: monospace; 
+	font-size: 11px; 
+	white-space: pre; 
+	color: #4a576f;
+}
+
 .searchbar {
-	border-color: $highlight-colour;
+	border-color: $hc;
 	border-style: solid;
 	border-width: 1px; 
 	border-radius: 20px;
@@ -62,6 +96,15 @@ h3 {
 @media only screen and (max-width: 550px) {
 	.searchbar {
 		width: 90%;
+	}
+	.Instruction1 {
+		display: none;
+	}
+	.Instructions {
+		display: none;
+	}
+	.Example {
+		display: none;
 	}
 }
 
@@ -77,10 +120,19 @@ h3 {
 	.searchbar-sm {
 		width: 190px;
 	}
+	.Instruction1 {
+		display: none;
+	}
+	.Instructions {
+		display: none;
+	}
+	.Example {
+		display: none;
+	}
 }
 
 .searchbutton {
-	background-color: $secondary-background-colour;
+	background-color: $sbc;
 	border-style: none;
 	margin: 11px 4px;
 	padding: 8px 16px;
@@ -92,8 +144,8 @@ h3 {
 		font-size: 10pt;
 		td .searchbutton {
 			float: right;
-			background-color: $affordance-colour;
-			color: $primary-background-colour;
+			background-color: $ac;
+			color: white;
 		}
 	}
 
@@ -107,9 +159,18 @@ h3 {
 	.vertical-center {
 		margin-top: 15px;
 	}
+	.Instruction1 {
+		display: none;
+	}
+	.Instructions {
+		display: none;
+	}
+	.Example {
+		display: none;
+	}
 }
 
 #{$ui-tags-hover}  {
-	box-shadow: 0 0 1px 1px $highlight-colour;
+	box-shadow: 0 0 1px 1px $hc;
 	outline: none;
 }
